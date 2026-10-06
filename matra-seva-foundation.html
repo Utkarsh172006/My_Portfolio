@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1022">
+    <title>Matra Seva Foundation</title>
+    <style>
+      :root {
+        --page-bg-1: #0f1630;
+        --page-bg-2: #1d2541;
+        --panel: rgba(15, 20, 35, 0.78);
+        --panel-border: rgba(228, 206, 239, 0.24);
+        --text: #f8f2ff;
+        --muted: #dfe1f2;
+        --soft: #d7c2e7;
+        --glow: rgba(212, 182, 235, 0.32);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          radial-gradient(circle at top left, rgba(255, 255, 63, 0.24), transparent 28%),
+          radial-gradient(circle at bottom right, rgba(255, 255, 63, 0.24), transparent 30%),
+          linear-gradient(135deg, #503fe9, #191b2f 48%, #1b2139);
+        color: var(--text);
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      .matra-page {
+        width: min(1200px, calc(100% - 36px));
+        margin: 70px auto 80px;
+      }
+
+      .experience-detail,
+      .certificate-section {
+        position: relative;
+        border: 1px solid var(--panel-border);
+        border-radius: 28px;
+        background: var(--panel);
+        box-shadow: 0 22px 60px rgba(0, 0, 0, 0.22);
+      }
+
+      .experience-detail {
+        padding: clamp(28px, 4vw, 52px);
+      }
+
+      .experience-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+        gap: 32px;
+        align-items: center;
+      }
+
+      .experience-detail__eyebrow,
+      .certificate-label {
+        margin: 0 0 18px;
+        color: var(--soft);
+        font-size: 9px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .experience-detail h1 {
+        margin: 0 0 18px;
+        color: var(--text);
+        font-family: "Iowan Old Style", "Baskerville", "Times New Roman", serif;
+        font-size: clamp(42px, 6vw, 74px);
+        font-weight: 400;
+        letter-spacing: -0.06em;
+        line-height: 0.9;
+      }
+
+      .experience-detail p {
+        margin: 0 0 18px;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.8;
+      }
+
+      .experience-detail ul {
+        margin: 0 0 28px;
+        padding-left: 20px;
+        color: #e7def4;
+        font-size: 17px;
+        line-height: 1.9;
+      }
+
+      .experience-gallery {
+        display: flex;
+        justify-content: center;
+      }
+      
+      .scroll-cue {
+        position: absolute;
+        z-index: 5;
+        left: 50%;
+        bottom: 31px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: rgba(57, 104, 231, 0.76);
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.15em;
+        transform: translateX(-50%);
+      }
+
+      .scroll-cue__track {
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 1px;
+        background: rgb(47 53 69 / 35%);
+      }
+
+      .scroll-cue__track i {
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: #604c77;
+        animation: cue-slide 1.8s ease-in-out infinite;
+      }
+
+      @keyframes cue-slide {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(25px); }
+      }
+
+      .gallery-strip {
+        display: flex;
+        gap: 12px;
+        justify-content: flex-end;
+        width: 100%;
+      }
+
+      .gallery-strip img {
+        display: block;
+        width: calc((100% - 24px) / 3);
+        height: 230px;
+        object-fit: cover;
+        border: 1px solid rgba(228, 206, 239, 0.2);
+        border-radius: 18px;
+        box-shadow: 0 18px 34px rgba(15, 19, 32, 0.35);
+      }
+
+      .back-button {
+        display: flex;
+        width: fit-content;
+        align-items: center;
+        justify-content: center;
+        margin: 34px auto 0;
+        padding: 14px 22px;
+        text-decoration: none;
+        border: 1px solid rgba(210, 182, 235, 0.38);
+        border-radius: 999px;
+        background: rgba(229, 212, 239, 0.06);
+        color: #f4e9fa;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+      }
+
+      .back-button:hover,
+      .back-button:focus-visible {
+        transform: translateY(-1px);
+        background: rgba(229, 212, 239, 0.12);
+        border-color: rgba(210, 182, 235, 0.66);
+      }
+
+      .certificate-section {
+        margin-top: 34px;
+        padding: clamp(24px, 3vw, 36px);
+      }
+
+      .certificate-section h2 {
+        margin: 0 0 22px;
+        color: var(--text);
+        font-family: "Iowan Old Style", "Baskerville", "Times New Roman", serif;
+        font-size: clamp(28px, 4vw, 42px);
+        font-weight: 400;
+        letter-spacing: -0.04em;
+      }
+
+      .certificate-image {
+        display: block;
+        width: min(100%, 760px);
+        margin: 0 auto;
+        border: 1px solid rgba(228, 206, 239, 0.2);
+        border-radius: 20px;
+        box-shadow: 0 18px 40px rgba(14, 18, 31, 0.38);
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(42px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+
+      .reveal.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 760px) {
+        .experience-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .gallery-strip {
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        .gallery-strip img {
+          width: calc((100% - 12px) / 2);
+        }
+      }
+
+      @media (max-width: 520px) {
+        .gallery-strip img {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="matra-page">
+      <section class="experience-detail reveal" aria-labelledby="matra-title">
+        <div class="experience-layout">
+          <div class="experience-copy">
+            <p class="experience-detail__eyebrow">Experience</p>
+            <h1 id="matra-title">Matra Seva Foundation</h1>
+            <p>I Teachered with Matra Seva Foundation as a Cyber &amp; Software Awareness Teacher, where I contributed to spreading awareness about digital safety, software literacy, and practical technology use within the community.</p>
+            <p>My role focused on helping people understand the basics of cyber hygiene, safe online practices, and how software tools can be used responsibly in day-to-day life. I also supported initiatives that promoted digital awareness and encouraged responsible technology adoption.</p>
+            <ul>
+              <li>Educated people on cyber safety and online awareness</li>
+              <li>Promoted responsible use of software and digital tools</li>
+              <li>Contributed to community-driven learning and awareness initiatives</li>
+              <li>Supported digital literacy efforts for broader societal impact</li>
+            </ul>
+          </div>
+
+          <div class="experience-gallery reveal">
+            <div class="gallery-strip">
+              <img src="./one.jpeg" alt="Matra Seva Foundation activity one">
+              <img src="./two.jpeg" alt="Matra Seva Foundation activity two">
+              <img src="./three.jpeg" alt="Matra Seva Foundation activity three">
+            </div>
+          </div>
+          <a class="scroll-cue"><span class="scroll-cue__track"><i></i></span><span>SCROLL TO EXPLORE</span></a>
+        </div>
+      </section>
+
+      <section class="certificate-section reveal" aria-labelledby="certificate-title">
+        <p class="certificate-label">Certificate</p>
+        <h2 id="certificate-title">Teacher Recognition</h2>
+        <img class="certificate-image" src="./Certificate.jpeg" alt="Matra Seva Foundation certificate">
+      </section>
+       <a class="back-button" href="./index.html#experience" aria-label="Back to Portfolio Experience section">&larr; Back to Portfolio</a>
+    </main>
+
+    <script>
+      const revealItems = document.querySelectorAll('.reveal');
+
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.14,
+        rootMargin: '0px 0px -10% 0px'
+      });
+
+      revealItems.forEach((item) => revealObserver.observe(item));
+    </script>
+  </body>
+</html>

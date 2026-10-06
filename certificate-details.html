@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f2f5f3">
+    <meta name="description" content="Certificate details and learning highlights.">
+    <title>Certificate Details</title>
+    <style>
+      :root {
+        --panel: rgba(255, 255, 255, 0.88);
+        --panel-border: rgba(39, 67, 75, 0.12);
+        --text: #1c3036;
+        --muted: #52666b;
+        --soft: #387b78;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        background:
+          radial-gradient(ellipse at 8% 4%, rgba(113, 170, 158, 0.16), transparent 34%),
+          radial-gradient(ellipse at 92% 92%, rgba(193, 165, 119, 0.13), transparent 32%),
+          #f2f5f3;
+        color: var(--text);
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      .certificate-page {
+        width: min(1080px, calc(100% - 40px));
+        margin: 64px auto 76px;
+      }
+
+      .learning-section,
+      .certificate-section {
+        position: relative;
+        border: 1px solid var(--panel-border);
+        border-radius: 20px;
+        background: var(--panel);
+        box-shadow: 0 20px 55px rgba(30, 57, 60, 0.08);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+      }
+
+      .learning-section {
+        padding: clamp(28px, 4vw, 52px);
+        border-top: 3px solid #4e9188;
+      }
+
+      .section-eyebrow {
+        margin: 0 0 18px;
+        color: var(--soft);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .learning-section h1 {
+        margin: 0 0 24px;
+        color: var(--text);
+        font-family: "Iowan Old Style", "Baskerville", "Times New Roman", serif;
+        font-size: clamp(42px, 6vw, 74px);
+        font-weight: 500;
+        letter-spacing: -0.06em;
+        line-height: 1;
+      }
+
+      .learning-section ul {
+        display: grid;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.7;
+        list-style: none;
+      }
+
+      .learning-section li {
+        padding: 13px 16px;
+        border: 1px solid rgba(57, 113, 109, 0.12);
+        border-radius: 10px;
+        background: rgba(77, 143, 134, 0.055);
+      }
+
+      .certificate-section {
+        margin-top: 34px;
+        padding: clamp(24px, 3vw, 36px);
+        background: rgba(255, 255, 255, 0.68);
+      }
+
+      .certificate-section h2 {
+        margin: 0 0 22px;
+        color: var(--text);
+        font-family: "Iowan Old Style", "Baskerville", "Times New Roman", serif;
+        font-size: clamp(28px, 4vw, 42px);
+        font-weight: 500;
+        letter-spacing: -0.04em;
+      }
+
+      .certificate-image {
+        display: block;
+        width: min(100%, 900px);
+        margin: 0 auto;
+        border: 1px solid rgba(39, 67, 75, 0.14);
+        border-radius: 12px;
+        box-shadow: 0 16px 38px rgba(30, 57, 60, 0.14);
+      }
+
+      .back-button {
+        display: flex;
+        width: fit-content;
+        align-items: center;
+        justify-content: center;
+        margin: 34px auto 0;
+        padding: 14px 22px;
+        border: 1px solid #294e50;
+        border-radius: 999px;
+        background: #294e50;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+      }
+
+      .back-button:hover,
+      .back-button:focus-visible {
+        transform: translateY(-1px);
+        background: #376b68;
+        border-color: #376b68;
+        box-shadow: 0 8px 20px rgba(41, 78, 80, 0.18);
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(42px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+
+      .reveal.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 600px) {
+        .certificate-page {
+          margin-top: 28px;
+        }
+
+        .learning-section ul {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="certificate-page">
+      <section class="learning-section reveal" aria-labelledby="certificate-title">
+        <p class="section-eyebrow">Certificate Learnings</p>
+        <h1 id="certificate-title"></h1>
+        <ul id="learning-points"></ul>
+      </section>
+
+      <section class="certificate-section reveal" aria-labelledby="certificate-image-title">
+        <p class="section-eyebrow">Certificate</p>
+        <h2 id="certificate-image-title"></h2>
+        <img class="certificate-image" id="certificate-image" alt="">
+      </section>
+
+      <a class="back-button" href="./index.html#credentials" aria-label="Back to Portfolio Proof of Practice section">&larr; Back to Portfolio</a>
+    </main>
+
+    <script>
+      const certificates = {
+        oracle: {
+          title: 'Oracle Certified Foundations Associate',
+          image: './Oracle.png',
+          imageAlt: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate certificate',
+          learnings: [
+            'Earned the Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate credential.',
+            'Gained foundational knowledge of Oracle Cloud Infrastructure (OCI), cloud computing, networking, compute, storage, identity and access management, security, and cloud cost management.'
+          ]
+        },
+        database: {
+          title: 'Database Management Systems',
+          image: './Database.png',
+          imageAlt: 'Scaler Topics certificate for DBMS Course - Master the Fundamentals and Advanced Concepts',
+          learnings: [
+            'Completed Scaler Topics’ DBMS Course: Master the Fundamentals and Advanced Concepts.',
+            'Gained knowledge of database design, SQL, ER modeling, normalization, transactions, ACID properties, indexing, concurrency control, and efficient data management.'
+          ]
+        },
+        java: {
+          title: 'Java Programming',
+          image: './Java.png',
+          imageAlt: 'HackerRank Java Basic skill certification certificate',
+          learnings: [
+            'Passed the HackerRank Java (Basic) skill certification test.',
+            'Gained foundational knowledge of Java programming, object-oriented programming (OOP), data types, control structures, arrays, strings, collections, and exception handling.'
+          ]
+        },
+        python: {
+          title: 'Python Programming',
+          image: './Python.png',
+          imageAlt: 'HackerRank Python Basic skill certification certificate',
+          learnings: [
+            'Passed the HackerRank Python (Basic) skill certification test.',
+            'Gained practical knowledge of Python programming, object-oriented concepts, data structures, exception handling, and data manipulation and numerical computing using Pandas and NumPy.'
+          ]
+        }
+      };
+
+      const certificateKey = new URLSearchParams(window.location.search).get('certificate');
+      const certificate = certificates[certificateKey];
+
+      if (!certificate) {
+        document.querySelector('.certificate-page').innerHTML =
+          '<section class="learning-section"><p class="section-eyebrow">Certificate</p><h1>Certificate not found</h1><p>Please return to the portfolio and choose a certificate from Proof of Practice.</p></section><a class="back-button" href="./index.html#credentials">← Back to Portfolio</a>';
+      } else {
+        document.title = `${certificate.title} | Certificate`;
+        document.querySelector('#certificate-title').textContent = certificate.title;
+        document.querySelector('#certificate-image-title').textContent = certificate.title;
+
+        const certificateImage = document.querySelector('#certificate-image');
+        certificateImage.src = certificate.image;
+        certificateImage.alt = certificate.imageAlt;
+
+        const learningPoints = document.querySelector('#learning-points');
+        certificate.learnings.forEach((learning) => {
+          const point = document.createElement('li');
+          point.textContent = learning;
+          learningPoints.append(point);
+        });
+
+        const revealItems = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('show');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.14,
+          rootMargin: '0px 0px -10% 0px'
+        });
+
+        revealItems.forEach((item) => revealObserver.observe(item));
+      }
+    </script>
+  </body>
+</html>

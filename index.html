@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1022">
+    <meta name="description" content="A thoughtful developer portfolio exploring the space between design and technology.">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="site-background" aria-hidden="true">
+      <canvas class="scene__canvas"></canvas>
+      <div class="site-background__aurora"></div>
+      <div class="scene__progress"><span class="scene__progress-value"></span></div>
+    </div>
+    <header class="site-header">
+      <a class="wordmark" href="#home" aria-label="Portfolio home">
+        <span class="wordmark__mark"><span></span></span>
+        <span class="wordmark__name">Utkarsh Kumar Srivastava</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#work">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#interpersonal-strengths">Strengths</a>
+        <a href="#credentials">Certifications</a>
+        <a href="#experience">Experience</a>
+        <a class="site-nav__contact" href="#contact">Contact me <span aria-hidden="true"></span></a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Open navigation">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <nav class="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation" hidden>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#work">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#skills">Strengths</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+      <section class="hero-story" id="home" aria-label="Introduction">
+        <div class="hero-stage">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow__line"></span> DIGITAL WORK. THOUGHTFULLY BUILT<span class="eyebrow__line"></span></p>
+            <h1>CONNECTING <br>WITH<br><em>THE</em> RECRUITERS<span class="hero-copy__period"></span></h1>
+          </div>
+          <a class="scroll-cue" href="#about"><span class="scroll-cue__track"><i></i></span><span>SCROLL TO EXPLORE</span></a>
+        </div>
+      </section>
+
+      <section class="about-section section-light" id="about">
+        <div class="about-section__top">
+          <p class="eyebrow eyebrow--dark"><span class="eyebrow__line"></span> A LITTLE INTRODUCTION</p>
+          <span class="section-index"></span>
+        </div>
+        <div class="about-grid">
+          <div class="about-heading">
+            <span class="about-heading__overline">HELLO RECRUITER, I'M</span>
+            <h2 class="about-name"><span>UTKARSH</span><span>KUMAR</span><span>SRIVASTAVA</span></h2>
+          </div>
+          <div class="about-copy">
+            <p class="about-copy__lead">I’m a software developer passionate about crafting meaningful digital experiences through clean code, thoughtful design, and innovative technology. From turning ideas into interactive applications to building secure, scalable solutions, I strive to create digital products where functionality meets simplicity.</p>
+          </div>
+          <div class="about-services">
+            <span class="eyebrow eyebrow--dark">WHAT I BRING</span>
+            <ul>
+              <li><span>✳</span> Software Engineering & Innovation</li>
+              <li><span>☾</span> Thoughtful interaction design</li>
+              <li><span>✴</span> Creative problem-solving</li>
+              <li><span>◌</span> A detail-first mindset</li>
+            </ul>
+          </div>
+         
+        </div>
+      </section>
+
+      <section class="work-section section-dark" id="work">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow__line"></span> A FEW THINGS, I MADE WITH CARE</p>
+            <h2>Selected <em>Projects</em><span class="lavender-dot">.</span></h2>
+          </div>
+          <p class="section-heading__aside"><br>Built to solve practical problems.</p>
+        </div>
+
+        <div class="project-grid">
+          <div class="project-row project-row--first">
+          <a class="project-card" href="https://github.com/Utkarsh172006/TaxSentinel-ps_2" target="_blank" rel="noreferrer" aria-label="View Tax-Sentinel on GitHub">
+            <div class="project-art project-art--tax-sentinel">
+              <span class="project-art__label">1. TAX-SENTINEL</span>
+              <div class="tax-sentinel-overview">
+                <div class="tax-sentinel-heading">
+                  <div>
+                    <h3>Tax<span>Sentinel</span></h3>
+                  </div>
+                </div>
+                <p class="tax-sentinel-summary">A demo-ready GST dashboard that maps CSV and Excel books, reconciles invoices against bank and ledger records, and turns detected issues into reviewable cases and reports.</p>
+                <div class="tax-sentinel-flow" aria-label="CSV, map, reconcile, report">
+                  <span>CSV</span><i>→</i><span>MAP</span><i>→</i><span>RECONCILE</span><i>→</i><span>REPORT</span>
+                </div>
+                <div class="tax-sentinel-capabilities">
+                  <span>GSTIN &amp; tax checks</span>
+                  <span>Bulk / split payments</span>
+                  <span>SQLite review audit</span>
+                  <span>Excel / PDF reports</span>
+                  <span>Offline explanations</span>
+                </div>
+                <div class="tax-sentinel-stack">
+                  <span class="project-tech-label">TECH STACK</span>
+                  <span>PYTHON</span><span>STREAMLIT</span><span>DuckDB</span><span>LightGBM</span>
+                </div>
+              </div>
+              <span class="project-art__arrow" aria-hidden="true">GitHub</span>
+            </div>
+          </a>
+
+          <a class="project-card" href="https://github.com/manyaruhela2005-bit/Border-Surveillance" target="_blank" rel="noreferrer" aria-label="View Border Surveillance on GitHub">
+            <div class="project-art project-art--border-surveillance">
+              <span class="project-art__label">4. BORDER SURVEILLANCE</span>
+              <div class="border-surveillance-overview">
+                <div class="border-surveillance-heading">
+                  <div>
+                    <span class="border-surveillance-kicker">AI SECURITY MONITORING</span>
+                    <h3>AI-Powered Grid Surveillance</h3>
+                  </div>
+                </div>
+                <p class="border-surveillance-summary">AI-based surveillance and threat detection for critical infrastructure and multi-site security monitoring.</p>
+                <div class="border-surveillance-flow" aria-label="CCTV and sensors, AI detection and tracking, risk scoring, threat classification, real-time alert, command and control, incident logging and replay">
+                  <span>CCTV / SENSORS</span><i>→</i>
+                  <span>AI DETECT &amp; TRACK</span><i>→</i>
+                  <span>RISK &amp; THREAT</span><i>→</i>
+                  <span>REAL-TIME ALERT</span><i>→</i>
+                  <span>COMMAND &amp; CONTROL</span>
+                </div>
+                <div class="border-surveillance-features">
+                  <span>Human detection &amp; tracking</span>
+                  <span>Vehicle detection &amp; classification</span>
+                  <span>Face detection &amp; recognition</span>
+                  <span>ANPR</span>
+                  <span>Restricted-zone alerts</span>
+                  <span>Suspicious activity · night movement</span>
+                  <span>Risk scoring · explainable alerts</span>
+                  <span>Event logging · offline / edge operation</span>
+                </div>
+                <div class="border-surveillance-stack">
+                  <span class="project-tech-label">TECH STACK</span>
+                  <span>PYTHON</span><span>DOCKER COMPOSE</span><span>ONNX</span><span>NGINX</span>
+                </div>
+              </div>
+              <span class="project-art__arrow" aria-hidden="true">GitHub</span>
+            </div>
+          </a>
+          </div>
+
+          <div class="project-row project-row--second">
+          <a class="project-card" href="https://github.com/Utkarsh172006/DBMS_StockMarket" target="_blank" rel="noreferrer" aria-label="View Stock Market Portfolio Management System on GitHub">
+            <div class="project-art project-art--stock-market">
+              <span class="project-art__label">2. STOCK MARKET PORTFOLIO MANAGEMENT</span>
+              <div class="stock-portfolio-overview">
+                <div class="stock-portfolio-heading">
+                  <div>
+                    <span class="stock-portfolio-kicker">A DATABASE-DRIVEN WEB APPLICATION</span>
+                    <h3>Stock Market Portfolio <br>Management</h3>
+                  </div>
+                </div>
+                <p class="stock-portfolio-summary">Buy and sell stocks, manage portfolio holdings, and track wallet balances and transaction history through one web app.</p>
+                <div class="stock-portfolio-flow" aria-label="User account, stock listings, buy and sell transactions, portfolio and wallet">
+                  <span>ACCOUNT</span><i>→</i>
+                  <span>STOCK LISTINGS</span><i>→</i>
+                  <span>BUY / SELL</span><i>→</i>
+                  <span>PORTFOLIO &amp; WALLET</span>
+                </div>
+                <div class="stock-portfolio-features">
+                  <span>User registration &amp; login</span>
+                  <span>Stock listings &amp; available shares</span>
+                  <span>Portfolio holdings &amp; value</span>
+                  <span>Wallet balance management</span>
+                  <span>Timestamped transaction history</span>
+                </div>
+                <div class="stock-portfolio-footer">
+                  <div class="stock-portfolio-stack">
+                    <span class="project-tech-label">TECH STACK</span>
+                    <span>JAVA SE</span><span>MYSQL</span><span>JDBC</span><span>VUE 3</span>
+                  </div>
+                  <span class="stock-portfolio-note"></span>
+                </div>
+              </div>
+              <span class="project-art__arrow" aria-hidden="true">GitHub</span>
+            </div>
+          </a>
+
+          <a class="project-card" href="https://github.com/Utkarsh172006/Secure_Login_System" target="_blank" rel="noreferrer" aria-label="View Secure Login System on GitHub">
+            <div class="project-art project-art--login-system">
+              <span class="project-art__label">3. Secure Login System</span>
+              <div class="login-system-overview">
+                <div class="login-system-heading">
+                  <div>
+                    <span class="login-system-kicker">JAVA AUTHENTICATION PROJECT</span>
+                    <h3>Secure Login System</h3>
+                  </div>
+                </div>
+                <p class="login-system-summary">A command-line login system that slows automated guessing and locks accounts after repeated failed attempts.</p>
+                <div class="login-system-flow" aria-label="Authenticate, track attempts, apply delays, lock account">
+                  <span>AUTHENTICATE</span><i>→</i>
+                  <span>TRACK ATTEMPTS</span><i>→</i>
+                  <span>DELAY &amp; LOCK</span>
+                </div>
+                <div class="login-system-features">
+                  <span>SHA-256 password hashing</span>
+                  <span>3-attempt lockout</span>
+                  <span>15-minute account lock</span>
+                  <span>Progressive delays</span>
+                  <span>Security activity log</span>
+                </div>
+                <div class="login-system-footer">
+                  <div class="login-system-stack">
+                    <span class="project-tech-label">TECH STACK</span>
+                    <span>JAVA</span><span>SHA-256</span><span>HASHMAP</span><span>CLI</span>
+                  </div>
+                </div>
+              </div>
+              <span class="project-art__arrow" aria-hidden="true">GitHub</span>
+            </div>
+          </a>
+          </div>
+        </div>
+        <p class="project-note"><span>✳</span> Explore more repositories on my GitHub profile.</p>
+      </section>
+
+      <section class="skills-section section-lavender" id="skills">
+        <div class="skills-intro">
+          <p class="eyebrow"><span class="eyebrow__line"></span> THE TOOLS ARE ONLY THE BEGINNING</p>
+          <h2 class="skills-title">Technical <span><em>Expertise.</em></span></h2>
+          <p class="skills-summary">Technologies and fundamentals I use to turn thoughtful ideas into useful, reliable software.</p>
+        </div>
+        <div class="skills-content">
+          <article class="skill-group">
+            <span class="skill-group__number"></span>
+            <div class="skill-group__content">
+              <h3>Languages</h3>
+              <ul class="skill-list">
+                <li>Core Java</li>
+                <li>Python</li>
+                <li>SQL</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS</li>
+                <li>TypeScript</li>
+                <li>React</li>
+                <li>C++</li>
+              </ul>
+            </div>
+          </article>
+          <article class="skill-group">
+            <span class="skill-group__number"></span>
+            <div class="skill-group__content">
+              <h3>Frameworks/Tools</h3>
+              <ul class="skill-list">
+                <li>React</li>
+                <li>Maven</li>
+                <li>Hibernate</li>
+                <li>JDBC</li>
+                <li>Spring Boot</li>
+                <li>REST APIs</li>
+                <li>Git</li>
+                <li>AWS</li>
+                <li>Docker</li>
+                <li>Kubernetes</li>
+                <li>Vue 3</li>
+                <li>Django</li>
+                <li>Flask</li>
+                <li>Streamlit</li>
+              </ul>
+            </div>
+          </article>
+          <article class="skill-group">
+            <span class="skill-group__number"></span>
+            <div class="skill-group__content">
+              <h3>Core</h3>
+              <ul class="skill-list">
+                <li>Data Structures &amp; Algorithms</li>
+                <li>Database Design</li>
+                <li>Networking</li>
+                <li>Authentication &amp; Access Control</li>
+                <li>Cloud-Native Design</li>
+                <li>Security Best Practices</li>
+                <li>Distributed Systems</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      
+
+      <section class="process-section interpersonal-section section-dark" id="interpersonal-strengths">
+        <div class="process-header interpersonal-header">
+          <div>
+            <p class="eyebrow"><span class="eyebrow__line"></span> Great code builds products; great skills build possibilities</p>
+            <h2 class="interpersonal-title">Interpersonal <em>Strengths</em></h2>
+          </div>
+        </div>
+        <div class="process-steps interpersonal-steps">
+          <article>
+            <h3>Discovery</h3>
+            <p>Understand the people, the problem, and what a good outcome really looks like.</p>
+          </article>
+          <article>
+            <h3>Problem-Solving</h3>
+            <p>Breaking down complex challenges and finding practical, logical solutions.</p>
+          </article>
+          <article>
+            <h3>Team Collaboration</h3>
+            <p>Working effectively with teammates to achieve shared goals and build solutions.</p>
+          </article>
+          <article>
+            <h3>Critical Thinking</h3>
+            <p>Expressing technical ideas clearly, listening actively, and sharing information effectively.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="credentials-section section-light" id="credentials">
+        <div class="credentials-heading">
+          <div><p class="eyebrow eyebrow--dark"><span class="eyebrow__line"></span> ALWAYS LEARNING, ALWAYS GROWING</p><h2>Proof of <em>practice.</em></h2></div>
+          <span class="section-index"></span>
+        </div>
+        <div class="credential-card">
+          <div class="credential-card__seal" aria-hidden="true">✳</div>
+          <div><span class="credential-card__label"></span><h3>Oracle Certified Foundations Associate</h3><p>Oracle</p></div>
+          <a href="./certificate-details.html?certificate=oracle" aria-label="View Oracle Certified Foundations Associate certificate and learnings">View</a>
+        </div>
+        <div class="credential-card">
+          <div class="credential-card__seal" aria-hidden="true">✳</div>
+          <div><span class="credential-card__label"></span><h3>Database Management Systems</h3><p>Coursera</p></div>
+          <a href="./certificate-details.html?certificate=database" aria-label="View Database Management Systems certificate and learnings">View</a>
+        </div>
+        <div class="credential-card">
+          <div class="credential-card__seal" aria-hidden="true">✳</div>
+          <div><span class="credential-card__label"></span><h3>Java Programming</h3><p>HackerRank</p></div>
+          <a href="./certificate-details.html?certificate=java" aria-label="View Java Programming certificate and learnings">View</a>
+        </div>
+        <div class="credential-card">
+          <div class="credential-card__seal" aria-hidden="true">✳</div>
+          <div><span class="credential-card__label"></span><h3>Python Programming</h3><p>HackerRank</p></div>
+          <a href="./certificate-details.html?certificate=python" aria-label="View Python Programming certificate and learnings">View</a>
+        </div>
+      </section>
+
+      <section class="credentials-section section-light experience-section" id="experience">
+        <div class="credentials-heading">
+          <div><p class="eyebrow eyebrow--dark"><span class="eyebrow__line"></span> WHERE I’VE APPLIED MY SKILLS</p><h2>Professional <em>Experience.</em></h2></div>
+          <span class="section-index"></span>
+        </div>
+        <div class="credential-card">
+          <div class="credential-card__seal" aria-hidden="true">✳</div>
+          <div><span class="credential-card__label"> </span><h3>Matra Seva Foundation</h3><p>Cyber & Software Awareness Teacher</p></div>
+          <a href="./matra-seva-foundation.html" aria-label="Open Matra Seva Foundation experience">Explore</a>
+        </div>
+        <div class="credential-card">
+          <div class="credential-card__seal" aria-hidden="true">✳</div>
+          <div><span class="credential-card__label"></span><h3>Software Developer Job Simulation</h3><p>I enhanced a Java backend with MongoDB integration, extended the React frontend using TypeScript, implemented API testing, and followed Git workflows by creating a Pull Request for code review.</p></div>
+          <a href="./software-developer-job-simulation.html" aria-label="Open Software Developer Job Simulation experience">Explore</a>
+        </div>
+      </section>
+
+      <section class="contact-section section-dark" id="contact">
+        <div class="contact-aurora" aria-hidden="true"></div>
+        <div class="contact-top"><p class="eyebrow"><span class="eyebrow__line"></span> GOOD THINGS START WITH A HELLO</p><span class="section-index">03 / CONTACT</span></div>
+        <div class="contact-main">
+          <div class="contact-heading">
+            <h2>Let’s talk<span class="lavender-dot">.</span></h2>
+          </div>
+          <div class="contact-details">
+            <p class="contact-bio">Open to building meaningful products, exploring new ideas, and collaborating on projects where technology solves real problems. If you have an opportunity, an idea, or simply want to connect, feel free to reach out.</p>
+            <div class="contact-methods">
+              <a class="contact-method" href="mailto:utkarshsri1706@gmail.com">
+                <span class="contact-method__label">EMAIL</span>
+                <span class="contact-method__value">utkarshsri1706@gmail.com</span>
+                <span class="contact-method__arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="contact-method" href="tel:+918840884851">
+                <span class="contact-method__label">PHONE</span>
+                <span class="contact-method__value">+91 8840884851</span>
+                <span class="contact-method__arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+            <div class="contact-socials" aria-label="Social profiles">
+              <a class="contact-social" href="https://www.linkedin.com/in/utkarsh-srivastava-17d/" target="_blank" rel="noreferrer" aria-label="LinkedIn profile (update this link)">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14ZM8.34 10H5.67v8h2.67v-8ZM7 5.96a1.55 1.55 0 1 0 0 3.1 1.55 1.55 0 0 0 0-3.1ZM18.33 13.42c0-2.4-1.28-3.52-2.98-3.52a2.57 2.57 0 0 0-2.31 1.27V10h-2.66v8h2.66v-4.2c0-1.11.21-2.19 1.6-2.19 1.36 0 1.38 1.28 1.38 2.26V18h2.66v-4.58Z"/></svg>
+                <span>LinkedIn</span><span class="contact-social__arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="contact-social" href="https://www.instagram.com/itz_utkarsh_1706/" target="_blank" rel="noreferrer" aria-label="Instagram profile (update this link)">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="contact-social__dot" cx="17.5" cy="6.5" r="1"/></svg>
+                <span>Instagram</span><span class="contact-social__arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="contact-social contact-social--resume" href="./Utkarsh_Kumar_Resume.pdf" target="_blank" rel="noreferrer" aria-label="Open resume PDF">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.75h8l4.25 4.3v13.2A1.75 1.75 0 0 1 16.5 22h-10A1.75 1.75 0 0 1 4.75 20.25V4.5A1.75 1.75 0 0 1 6.5 2.75H6Zm7.25 1.8V8h3.45M8 12h8M8 15h8M8 18h5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Resume</span><span class="contact-social__arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-bottom">
+          <a class="wordmark wordmark--footer" href="#home" aria-label="Back to top"><span class="wordmark__mark"><span></span></span><span class="wordmark__name">Utkarsh Kumar Srivastava</span></a>
+          <p>Made by Utkarsh Kumar Srivastava<br><span>© <span id="current-year"></span> — PERSONAL PORTFOLIO</span></p>
+          <a class="back-to-top" href="#home">BACK TO TOP <span>↑</span></a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
